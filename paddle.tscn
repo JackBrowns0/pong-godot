@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d4j7xe1qi3tfu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g36yv"]
+
+[node name="PaddleRight" type="CharacterBody2D" unique_id=750807114]
+modulate = Color(0.22312176, 0.5988901, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1053464886]
+position = Vector2(260, 191)
+shape = SubResource("RectangleShape2D_g36yv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1066778542]
+offset_left = 295.0
+offset_top = 85.0
+offset_right = 335.0
+offset_bottom = 125.0

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b821myv7hqira"]
+
+[ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://paddle.tscn" id="1_ig7tw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htlxk"]
+
+[node name="Main" type="Node2D" unique_id=1153692410]
+
+[node name="PaddleRight" parent="." unique_id=750807114 instance=ExtResource("1_ig7tw")]
+
+[node name="Bumba" type="Sprite2D" parent="." unique_id=499074840]
+
+[node name="Punkti" type="Label" parent="." unique_id=1090386034]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PaddleLeft" type="CharacterBody2D" parent="." unique_id=1949865277]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaddleLeft" unique_id=1935463962]
+shape = SubResource("RectangleShape2D_htlxk")
+
+[node name="ColorRect" type="ColorRect" parent="PaddleLeft" unique_id=1070681801]
+offset_left = 199.0
+offset_top = 161.0
+offset_right = 239.0
+offset_bottom = 201.0
