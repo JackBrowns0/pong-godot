@@ -5,26 +5,63 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htlxk"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g36yv"]
+size = Vector2(213.33334, 4.833333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adyyn"]
+size = Vector2(1280, 26)
+
 [node name="Main" type="Node2D" unique_id=1153692410]
 
 [node name="PaddleRight" parent="." unique_id=750807114 instance=ExtResource("1_ig7tw")]
+position = Vector2(1220, 360)
 
 [node name="Bumba" type="Sprite2D" parent="." unique_id=499074840]
+modulate = Color(0.99607843, 0, 0, 1)
+position = Vector2(640, 360)
 
 [node name="Punkti" type="Label" parent="." unique_id=1090386034]
 offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="PaddleLeft" type="CharacterBody2D" parent="." unique_id=1949865277]
+position = Vector2(60, 360)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PaddleLeft" unique_id=1935463962]
 shape = SubResource("RectangleShape2D_htlxk")
 
 [node name="ColorRect" type="ColorRect" parent="PaddleLeft" unique_id=1070681801]
-offset_left = 199.0
-offset_top = 161.0
-offset_right = 239.0
-offset_bottom = 201.0
+offset_left = -18.0
+offset_top = -21.0
+offset_right = 22.0
+offset_bottom = 19.0
 
 [node name="Hello" type="Node" parent="." unique_id=903730645]
 script = ExtResource("2_0xm2m")
+
+[node name="SienaAugsa" type="StaticBody2D" parent="." unique_id=411007982]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SienaAugsa" unique_id=533089000]
+position = Vector2(640, 15.500001)
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_g36yv")
+
+[node name="ColorRect" type="ColorRect" parent="SienaAugsa" unique_id=92957214]
+offset_right = 1280.0
+offset_bottom = 30.0
+
+[node name="SienaApaksa" type="StaticBody2D" parent="." unique_id=435208676]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SienaApaksa" unique_id=882557148]
+position = Vector2(640, 707)
+shape = SubResource("RectangleShape2D_adyyn")
+
+[node name="ColorRect" type="ColorRect" parent="SienaApaksa" unique_id=1091654288]
+offset_top = 694.0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="VidusLinija" type="Line2D" parent="." unique_id=824269194]
+position = Vector2(352.01837, 0)
+scale = Vector2(0.44585878, 1)
+points = PackedVector2Array(647, 708, 647, 17)
